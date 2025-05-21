@@ -7,14 +7,14 @@ They does nothing unexpected at runtime. But can generate rather complex network
 E.g., (eth - bond - bridge - vlan - bridge - macvlan).
 Or something like (eth - bridge - veth - bridge - [openvswitch-managed area]).
 
-I just got "initscripts-10.00.18-1.el8.src.rpm" and rebuilt it to fit the actual dependencies.
+I just took "initscripts-10.00.18-1.el8.src.rpm" and rebuilt it in accordance with actual dependencies.
 
 There is also the "network-scripts-extra" package that enhances "network-scripts" functions.
 It helps to tune extra devices, as well as do some Ethernet tuning.
 Feel free to use "network-scripts-extra" as a template to write Your own enhancements.
 (M.b., for "NetworkManager". It supports hooks :)
 
-The example on how to replace "NetworkManager" (touch "sysconfig/disable-deprecation-warnings" to stop warnings).
+The example on how to replace "NetworkManager" (touch "sysconfig/disable-deprecation-warnings" to stop warings).
 It assumes there is the only physical interface, but You can fix it by tuning "dev=".
  
     rpm -ivh network-scripts-*
